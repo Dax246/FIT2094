@@ -1,0 +1,643 @@
+SQL> 
+SQL> DROP TABLE appointment CASCADE CONSTRAINTS;
+
+Table APPOINTMENT dropped.
+
+SQL> 
+SQL> DROP TABLE appointment_nurse CASCADE CONSTRAINTS;
+
+Table APPOINTMENT_NURSE dropped.
+
+SQL> 
+SQL> DROP TABLE appointment_service CASCADE CONSTRAINTS;
+
+Table APPOINTMENT_SERVICE dropped.
+
+SQL> 
+SQL> DROP TABLE insurer CASCADE CONSTRAINTS;
+
+Table INSURER dropped.
+
+SQL> 
+SQL> DROP TABLE nurse CASCADE CONSTRAINTS;
+
+Table NURSE dropped.
+
+SQL> 
+SQL> DROP TABLE patient CASCADE CONSTRAINTS;
+
+Table PATIENT dropped.
+
+SQL> 
+SQL> DROP TABLE payment CASCADE CONSTRAINTS;
+
+Table PAYMENT dropped.
+
+SQL> 
+SQL> DROP TABLE provider CASCADE CONSTRAINTS;
+
+Table PROVIDER dropped.
+
+SQL> 
+SQL> DROP TABLE provider_service CASCADE CONSTRAINTS;
+
+Table PROVIDER_SERVICE dropped.
+
+SQL> 
+SQL> DROP TABLE service CASCADE CONSTRAINTS;
+
+Table SERVICE dropped.
+
+SQL> 
+SQL> -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+SQL> 
+SQL> -- predefined type, no DDL - XMLTYPE
+SQL> 
+SQL> CREATE TABLE appointment (
+  2      prov_code      CHAR(6) NOT NULL,
+  3      appt_datetime  DATE NOT NULL,
+  4      appt_room      NUMBER(4) NOT NULL,
+  5      appt_type      VARCHAR2(50) NOT NULL,
+  6      appt_fee       NUMBER(5, 2) NOT NULL,
+  7      patient_no     NUMBER(4) NOT NULL,
+  8      appt_no        NUMBER(7) NOT NULL
+  9  );
+
+Table APPOINTMENT created.
+
+SQL> 
+SQL> ALTER TABLE appointment
+  2      ADD CONSTRAINT "Appointment length " CHECK ( appt_type IN ( 'Long', 'Short', 'Standard' ) );
+
+Table APPOINTMENT altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment.prov_code IS
+  2      'Provider code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment.appt_datetime IS
+  2      'Appointment date and time';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment.appt_room IS
+  2      'Appointment Room';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment.appt_type IS
+  2      'Appointment Type which keeps track of appointment length (short, standard or long)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment.appt_fee IS
+  2      'Actual fee for appointment';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment.patient_no IS
+  2      'Patient Number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment.appt_no IS
+  2      'Surrogate key for appointment';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE appointment ADD CONSTRAINT appointment_pk PRIMARY KEY ( patient_no,
+  2                                                                      appt_no );
+
+Table APPOINTMENT altered.
+
+SQL> 
+SQL> CREATE TABLE appointment_nurse (
+  2      nurse_no     NUMBER(4) NOT NULL,
+  3      nurse_head   VARCHAR2(3) NOT NULL,
+  4      appt_no      NUMBER(7) NOT NULL,
+  5      patient_no   NUMBER(4) NOT NULL,
+  6      patient_no2  NUMBER(4) NOT NULL
+  7  );
+
+Table APPOINTMENT_NURSE created.
+
+SQL> 
+SQL> ALTER TABLE appointment_nurse
+  2      ADD CONSTRAINT "Is_head_nurse?" CHECK ( nurse_head IN ( 'No', 'Yes' ) );
+
+Table APPOINTMENT_NURSE altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment_nurse.nurse_no IS
+  2      'Nurse Number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment_nurse.nurse_head IS
+  2      'Checks if nurse is head nurse of appointment';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment_nurse.appt_no IS
+  2      'Surrogate key for appointment';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment_nurse.patient_no2 IS
+  2      'Patient Number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE appointment_nurse ADD CONSTRAINT appointment_nurse_pk PRIMARY KEY ( nurse_no,
+  2                                                                                  appt_no );
+
+Table APPOINTMENT_NURSE altered.
+
+SQL> 
+SQL> CREATE TABLE appointment_service (
+  2      service_code         NUMBER(4) NOT NULL,
+  3      service_fee_charged  NUMBER(7, 2) NOT NULL,
+  4      appt_no              NUMBER(7) NOT NULL,
+  5      patient_no           NUMBER(4) NOT NULL,
+  6      patient_no2          NUMBER(4) NOT NULL
+  7  );
+
+Table APPOINTMENT_SERVICE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment_service.service_code IS
+  2      'Service Code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment_service.service_fee_charged IS
+  2      'Actual fee charged for service';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment_service.appt_no IS
+  2      'Surrogate key for appointment';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN appointment_service.patient_no2 IS
+  2      'Patient Number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE appointment_service ADD CONSTRAINT appointment_service_pk PRIMARY KEY ( service_code );
+
+Table APPOINTMENT_SERVICE altered.
+
+SQL> 
+SQL> CREATE TABLE insurer (
+  2      insurer_code      NUMBER(7) NOT NULL,
+  3      insurer_name      VARCHAR2(100) NOT NULL,
+  4      insurer_phone_no  NUMBER(10) NOT NULL
+  5  );
+
+Table INSURER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN insurer.insurer_code IS
+  2      'Insurance Code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN insurer.insurer_name IS
+  2      'Insurer Name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN insurer.insurer_phone_no IS
+  2      'insurer''s phone number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE insurer ADD CONSTRAINT insurer_pk PRIMARY KEY ( insurer_code );
+
+Table INSURER altered.
+
+SQL> 
+SQL> CREATE TABLE nurse (
+  2      nurse_no     NUMBER(4) NOT NULL,
+  3      nurse_fname  VARCHAR2(20) NOT NULL,
+  4      nurse_lname  VARCHAR2(50) NOT NULL,
+  5      nurse_phone  NUMBER(10) NOT NULL
+  6  );
+
+Table NURSE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN nurse.nurse_no IS
+  2      'Nurse Number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN nurse.nurse_fname IS
+  2      'Nurse First Name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN nurse.nurse_lname IS
+  2      'Nurse Last Name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN nurse.nurse_phone IS
+  2      'Nurse Phone Number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE nurse ADD CONSTRAINT nurse_pk PRIMARY KEY ( nurse_no );
+
+Table NURSE altered.
+
+SQL> 
+SQL> CREATE TABLE patient (
+  2      patient_no                NUMBER(4) NOT NULL,
+  3      patient_fname             VARCHAR2(50) NOT NULL,
+  4      patient_lname             VARCHAR2(50) NOT NULL,
+  5      patient_dob               DATE NOT NULL,
+  6      patient_addr_street_no    NUMBER(4) NOT NULL,
+  7      patient_addr_street_name  VARCHAR2(100) NOT NULL,
+  8      patient_address_suburb    VARCHAR2(50) NOT NULL,
+  9      patient_addr_postcode     NUMBER(4) NOT NULL,
+ 10      patient_medicare_no       NUMBER(10) NOT NULL,
+ 11      insurer_code              NUMBER(7)
+ 12  );
+
+Table PATIENT created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_no IS
+  2      'Patient Number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_fname IS
+  2      'Patient First Name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_lname IS
+  2      'Patient last name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_dob IS
+  2      'Patient Date of Birth';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_addr_street_no IS
+  2      'Patient Address Street Number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_addr_street_name IS
+  2      'Patient Address Street Name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_address_suburb IS
+  2      'Patient Address Suburb Name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_addr_postcode IS
+  2      'Patient Address Postcode';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.patient_medicare_no IS
+  2      'Patient''s medicare number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN patient.insurer_code IS
+  2      'Insurance Code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE patient ADD CONSTRAINT patient_pk PRIMARY KEY ( patient_no );
+
+Table PATIENT altered.
+
+SQL> 
+SQL> CREATE TABLE payment (
+  2      pay_no       NUMBER(6) NOT NULL,
+  3      pay_from     VARCHAR2(100) NOT NULL,
+  4      pay_amount   NUMBER(7, 2) NOT NULL,
+  5      appt_no      NUMBER(7) NOT NULL,
+  6      patient_no   NUMBER(4) NOT NULL,
+  7      patient_no2  NUMBER(4) NOT NULL
+  8  );
+
+Table PAYMENT created.
+
+SQL> 
+SQL> ALTER TABLE payment
+  2      ADD CONSTRAINT "Payment From Names" CHECK ( pay_from IN ( 'Insurer', 'Patient' ) );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.pay_no IS
+  2      'Payment Number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.pay_from IS
+  2      'Payment From';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.pay_amount IS
+  2      'Payment Amount Paid';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.appt_no IS
+  2      'Surrogate key for appointment';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.patient_no2 IS
+  2      'Patient Number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE payment ADD CONSTRAINT payment_pk PRIMARY KEY ( pay_no );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> CREATE TABLE provider (
+  2      prov_code            CHAR(6) NOT NULL,
+  3      prov_fname           VARCHAR2(50) NOT NULL,
+  4      prov_lname           VARCHAR2(50) NOT NULL,
+  5      prov_reg_no          CHAR(8) NOT NULL,
+  6      prov_first_reg_date  DATE NOT NULL,
+  7      prov_reg_status      VARCHAR2(10) NOT NULL,
+  8      prov_month_charge    NUMBER(10, 2) NOT NULL,
+  9      prov_year_charge     NUMBER(10, 2) NOT NULL,
+ 10      prov_title           VARCHAR2(4) NOT NULL,
+ 11      prov_type            VARCHAR2(50) NOT NULL,
+ 12      prov_normal_room_no  NUMBER(5) NOT NULL
+ 13  );
+
+Table PROVIDER created.
+
+SQL> 
+SQL> ALTER TABLE provider
+  2      ADD CONSTRAINT "Registration Status" CHECK ( prov_reg_status IN ( 'Cancelled', 'Registered', 'Suspended' ) );
+
+Table PROVIDER altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_code IS
+  2      'Provider code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_fname IS
+  2      'Provider First Name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_lname IS
+  2      'Provider last name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_reg_no IS
+  2      'Provider registration number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_first_reg_date IS
+  2      'Provider first registration date';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_reg_status IS
+  2      'Provider Registration Status - Either registered, suspended, cancelled';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_month_charge IS
+  2      'Provider Month to Date Total Charge';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_year_charge IS
+  2      'Provider Year to Date';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_title IS
+  2      'Provider Title';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_type IS
+  2      'Provider Type';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider.prov_normal_room_no IS
+  2      'Provider''s Normal room number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE provider ADD CONSTRAINT provider_pk PRIMARY KEY ( prov_code );
+
+Table PROVIDER altered.
+
+SQL> 
+SQL> CREATE TABLE provider_service (
+  2      prov_code     CHAR(6) NOT NULL,
+  3      service_code  NUMBER(4) NOT NULL
+  4  );
+
+Table PROVIDER_SERVICE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider_service.prov_code IS
+  2      'Provider code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN provider_service.service_code IS
+  2      'Service Code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE provider_service ADD CONSTRAINT provider_service_pk PRIMARY KEY ( prov_code,
+  2                                                                                service_code );
+
+Table PROVIDER_SERVICE altered.
+
+SQL> 
+SQL> CREATE TABLE service (
+  2      service_code      NUMBER(4) NOT NULL,
+  3      service_desc      VARCHAR2(200) NOT NULL,
+  4      service_stnd_fee  NUMBER(7, 2) NOT NULL
+  5  );
+
+Table SERVICE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN service.service_code IS
+  2      'Service Code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN service.service_desc IS
+  2      'Service Description';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN service.service_stnd_fee IS
+  2      'Service Standard Fee';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE service ADD CONSTRAINT service_pk PRIMARY KEY ( service_code );
+
+Table SERVICE altered.
+
+SQL> 
+SQL> ALTER TABLE appointment_nurse
+  2      ADD CONSTRAINT appointment_nurse FOREIGN KEY ( nurse_no )
+  3          REFERENCES nurse ( nurse_no );
+
+Table APPOINTMENT_NURSE altered.
+
+SQL> 
+SQL> ALTER TABLE appointment_service
+  2      ADD CONSTRAINT appointment_service FOREIGN KEY ( service_code )
+  3          REFERENCES service ( service_code );
+
+Table APPOINTMENT_SERVICE altered.
+
+SQL> 
+SQL> ALTER TABLE appointment_nurse
+  2      ADD CONSTRAINT "Appointment's_nurse" FOREIGN KEY ( patient_no,
+  3                                                         appt_no )
+  4          REFERENCES appointment ( patient_no,
+  5                                   appt_no );
+
+Table APPOINTMENT_NURSE altered.
+
+SQL> 
+SQL> ALTER TABLE appointment_service
+  2      ADD CONSTRAINT "appointment's_service" FOREIGN KEY ( patient_no,
+  3                                                           appt_no )
+  4          REFERENCES appointment ( patient_no,
+  5                                   appt_no );
+
+Table APPOINTMENT_SERVICE altered.
+
+SQL> 
+SQL> ALTER TABLE patient
+  2      ADD CONSTRAINT "Insurer's_Patients" FOREIGN KEY ( insurer_code )
+  3          REFERENCES insurer ( insurer_code );
+
+Table PATIENT altered.
+
+SQL> 
+SQL> ALTER TABLE appointment
+  2      ADD CONSTRAINT "Patient's_appointment" FOREIGN KEY ( patient_no )
+  3          REFERENCES patient ( patient_no );
+
+Table APPOINTMENT altered.
+
+SQL> 
+SQL> ALTER TABLE payment
+  2      ADD CONSTRAINT payment_for_appointment FOREIGN KEY ( patient_no,
+  3                                                           appt_no )
+  4          REFERENCES appointment ( patient_no,
+  5                                   appt_no );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> ALTER TABLE appointment
+  2      ADD CONSTRAINT "Provider's_appointments" FOREIGN KEY ( prov_code )
+  3          REFERENCES provider ( prov_code );
+
+Table APPOINTMENT altered.
+
+SQL> 
+SQL> ALTER TABLE provider_service
+  2      ADD CONSTRAINT "Provider's_Services" FOREIGN KEY ( prov_code )
+  3          REFERENCES provider ( prov_code );
+
+Table PROVIDER_SERVICE altered.
+
+SQL> 
+SQL> ALTER TABLE provider_service
+  2      ADD CONSTRAINT service_provider FOREIGN KEY ( service_code )
+  3          REFERENCES service ( service_code );
+
+Table PROVIDER_SERVICE altered.
+
+SQL> 
+SQL> SPOOL off

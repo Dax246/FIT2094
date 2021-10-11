@@ -1,0 +1,171 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="75356B3B-6C35-6FDB-1430-4F23DC80B2AC" name="PATIENT">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>C76E470A-DA1E-159F-F61F-FECF23B5FB57</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="patient_no" id="66931F7C-B950-3604-A91F-A5D4D1F878F0">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Number]]></commentInRDBMS>
+<generatorID>B9668E6E-18D2-BD19-1DD5-8CA090AAE553</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patient_fname" id="EE06A8C7-2CBD-E88F-9BB3-4999F8629EE6">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient First Name]]></commentInRDBMS>
+<generatorID>45AF26A8-1B76-B9B7-8439-4C0F22F5B078</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patient_lname" id="ABB1C917-E6CD-F402-5AAF-1047F47568A6">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient last name]]></commentInRDBMS>
+<generatorID>4F895717-C88C-FAAA-730C-1BBFD12AD890</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patient_dob" id="D3AADDB8-57FA-217C-DD72-BA656C6FFB40">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Date of Birth]]></commentInRDBMS>
+<generatorID>9DFBDE7D-DBF1-19CC-277D-0252EECAC5D4</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patient_addr_street_no" id="8A579B87-F65E-A0AF-9089-24395DFC9CA5">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Address Street Number]]></commentInRDBMS>
+<generatorID>B880090D-6483-5CBC-BFC0-597E040C944C</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patient_addr_street_name" id="65D374A1-783F-C21F-3E47-A9519E2B4BFF">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Address Street Name]]></commentInRDBMS>
+<generatorID>E755F86D-1630-28FB-06D7-D7FC54B6184F</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patient_address_suburb" id="02CEBA5B-D057-DA7C-2F76-413C1293ED76">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Address Suburb Name]]></commentInRDBMS>
+<generatorID>E0EB9223-9DF5-EADA-6373-70D7616C7C03</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patient_addr_postcode" id="F26CC9F3-0A85-4366-E232-607B458673D2">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Address Postcode]]></commentInRDBMS>
+<generatorID>AE89EB5D-AF6A-C402-202E-8C96E355A66C</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patient_medicare_no" id="E5842E5A-AC5A-0031-27CE-D6508EB7BC32">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient's medicare number]]></commentInRDBMS>
+<generatorID>752059AD-D081-EA08-C789-2BEC8D6BB8BE</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="insurer_code" id="1B85154F-1608-B889-60AB-86E15FB648D4">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Insurance Code]]></commentInRDBMS>
+<generatorID>CEA22B32-4E00-B64E-7BC8-23051E27A181</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5C6BC557-AF42-7E3E-0E1F-094E54F8050B" referredColumn="9856C830-99E2-A6C3-A750-727B760523F2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2C2D0D19-A474-F9C2-5CD2-40792697F0DF" name="PATIENT_PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>1DD46B50-23CB-0F45-F2A7-334E826F60F5</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66931F7C-B950-3604-A91F-A5D4D1F878F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76DBF6D5-1C99-1CDE-1734-6830943F19CE" name="Insurer&apos;s_Patients">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:49 UTC</createdTime>
+<generatorID>5DE264EE-9EC4-12FE-1052-3CD3D8426BA6</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1B85154F-1608-B889-60AB-86E15FB648D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

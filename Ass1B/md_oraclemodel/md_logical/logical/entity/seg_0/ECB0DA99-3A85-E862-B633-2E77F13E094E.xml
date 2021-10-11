@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ECB0DA99-3A85-E862-B633-2E77F13E094E" name="PROVIDER">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:17:08 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="prov_code" id="7B848038-4711-B0A2-CD69-B1EF83247E1B">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:17:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider code]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_fname" id="FC20331C-8885-813A-2258-781990828717">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:19:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider First Name]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_lname" id="A10B0393-32C5-8436-C0EB-1D72AA781A0F">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:35:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider last name]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_reg_no" id="53C0F33A-B8CA-5FF4-B6CA-646649EB1CE3">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:36:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider registration number]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_first_reg_date" id="B8715459-823A-10EC-A759-C4FC39342E15">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:38:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider first registration date]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_reg_status" id="FAFA7EF3-16E9-AFE1-EB74-2E7EFE28A4B1">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:39:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Registration Status - Either registered, suspended, cancelled]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<constraintName>Registration Status</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="Cancelled" description="Cancelled Registration"/>
+<valueDef value="Registered" description="Registered Registration"/>
+<valueDef value="Suspended" description="Suspended Registration"/>
+</listOfValues>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_month_charge" id="4D72774A-A22C-9349-BE6F-41625F321999">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:40:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Month to Date Total Charge]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_year_charge" id="18B5D92F-E4CA-28CE-6B94-6E495E65E52B">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:42:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Year to Date]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_title" id="896978ED-C295-EC53-B255-14D631F46D09">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:05:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Title]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_type" id="B191CF96-0F6F-69F6-4169-B65382E3EAF7">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:10:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Type]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prov_normal_room_no" id="D0ECD1B2-6267-A982-FE31-E065959A659C">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:11:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider's Normal room number]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FE4F25E8-1EEB-66BA-CB8F-083A5879A68E" name="PROVIDER PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 13:18:26 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7B848038-4711-B0A2-CD69-B1EF83247E1B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

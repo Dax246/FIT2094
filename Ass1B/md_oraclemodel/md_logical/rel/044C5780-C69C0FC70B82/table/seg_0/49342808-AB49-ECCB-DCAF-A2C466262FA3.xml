@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="49342808-AB49-ECCB-DCAF-A2C466262FA3" name="SERVICE">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>EC376A97-997F-9CAE-971D-CDB0B18BA6A4</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="service_code" id="76E3B457-A8EC-0638-5EF3-1EB4F3A0B49A">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Service Code]]></commentInRDBMS>
+<generatorID>0B3E8E20-1B76-F5FA-19B3-10E55475439D</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="service_desc" id="0A75833E-02BE-AD18-56EF-F854A1CB8566">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Service Description]]></commentInRDBMS>
+<generatorID>640917B6-04E9-CD67-7B18-830DDDFC218A</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="service_stnd_fee" id="8F7AB5AD-A0B0-EB5C-20E1-C3827D945373">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Service Standard Fee]]></commentInRDBMS>
+<generatorID>08BECF31-9F23-409D-2A43-F098FF813759</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5B2198CF-89C6-A418-13B4-C6920823D9F0" name="SERVICE_PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>25341797-3DED-4C07-9792-D3F3D290DFF9</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76E3B457-A8EC-0638-5EF3-1EB4F3A0B49A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

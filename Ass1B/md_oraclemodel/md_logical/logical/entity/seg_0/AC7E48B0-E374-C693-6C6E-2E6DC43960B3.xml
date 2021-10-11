@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AC7E48B0-E374-C693-6C6E-2E6DC43960B3" name="PAYMENT">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 01:51:26 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="pay_no" id="6840A4DD-CE0F-72FB-205B-397B4845BBC7">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 01:51:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Payment Number]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pay_from" id="0427DB18-8E07-E57E-578F-C736003C97BA">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 01:51:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Payment From]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<constraintName>Payment From Names</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<listOfValues>
+<valueDef value="Insurer" description="Insurer Paid"/>
+<valueDef value="Patient" description="Patient paid "/>
+</listOfValues>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pay_amount" id="66E31CEA-B1E0-2153-133A-AA457779E6E3">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 01:52:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Payment Amount Paid]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="appt_no" id="322F0E09-87F7-CF40-3D9D-BA9AA1253A38">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 11:50:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for appointment]]></commentInRDBMS>
+<generatorID>F95A0045-0408-63E9-5DE4-448987C7B7E7</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>3BA6087F-04BF-84FB-94A2-65E4C84E6AC6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="patient_no" id="A0081947-1DC4-FADB-B800-6E46ED348E04">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Number]]></commentInRDBMS>
+<generatorID>F95A0045-0408-63E9-5DE4-448987C7B7E7</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>46E62EF0-E429-49A6-8DDA-68B000CAE750</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="81A7FB48-1FDB-96B9-589E-AAF0FF50235F" name="PAYMENT PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 01:51:48 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6840A4DD-CE0F-72FB-205B-397B4845BBC7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

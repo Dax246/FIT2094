@@ -1,0 +1,176 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="494302E0-9EB3-C9DA-5041-4BC787CDC1BD" name="PROVIDER">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>ECB0DA99-3A85-E862-B633-2E77F13E094E</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="prov_code" id="90BAF1C1-A06D-8645-D7AF-62947ED73ABE">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider code]]></commentInRDBMS>
+<generatorID>7B848038-4711-B0A2-CD69-B1EF83247E1B</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_fname" id="C69B9CA9-0441-E71D-5E66-0752667B7631">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider First Name]]></commentInRDBMS>
+<generatorID>FC20331C-8885-813A-2258-781990828717</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_lname" id="0C7FC6C8-2782-1852-C70A-87B27B20EA59">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider last name]]></commentInRDBMS>
+<generatorID>A10B0393-32C5-8436-C0EB-1D72AA781A0F</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_reg_no" id="A86BFA32-43B5-E15F-2E92-579C608B3A98">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider registration number]]></commentInRDBMS>
+<generatorID>53C0F33A-B8CA-5FF4-B6CA-646649EB1CE3</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_first_reg_date" id="AFE3196E-26E1-9679-D280-3821BBEEE3E3">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider first registration date]]></commentInRDBMS>
+<generatorID>B8715459-823A-10EC-A759-C4FC39342E15</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_reg_status" id="4F4D3F1D-BEF9-11ED-E7A3-D025585DA984">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Registration Status - Either registered, suspended, cancelled]]></commentInRDBMS>
+<generatorID>FAFA7EF3-16E9-AFE1-EB74-2E7EFE28A4B1</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<constraintName>Registration Status</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="Cancelled" description="Cancelled Registration"/>
+<valueDef value="Registered" description="Registered Registration"/>
+<valueDef value="Suspended" description="Suspended Registration"/>
+</listOfValues>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_month_charge" id="99978DF8-F785-FB1D-CEE1-D03D6AD9D43F">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Month to Date Total Charge]]></commentInRDBMS>
+<generatorID>4D72774A-A22C-9349-BE6F-41625F321999</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_year_charge" id="E14D7563-553B-ACD9-2ABE-A305816D43FB">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Year to Date]]></commentInRDBMS>
+<generatorID>18B5D92F-E4CA-28CE-6B94-6E495E65E52B</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_title" id="437DB0B7-29E0-0D92-D448-AA4031153751">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Title]]></commentInRDBMS>
+<generatorID>896978ED-C295-EC53-B255-14D631F46D09</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_type" id="E016152F-52D6-2ABF-AD2B-60D08E6226CC">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider Type]]></commentInRDBMS>
+<generatorID>B191CF96-0F6F-69F6-4169-B65382E3EAF7</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prov_normal_room_no" id="1E99661F-6835-E884-BA21-B9A586EEA274">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider's Normal room number]]></commentInRDBMS>
+<generatorID>D0ECD1B2-6267-A982-FE31-E065959A659C</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2B6C90F2-88BD-7601-E6CF-D8746FE4D910" name="PROVIDER_PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>FE4F25E8-1EEB-66BA-CB8F-083A5879A68E</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90BAF1C1-A06D-8645-D7AF-62947ED73ABE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

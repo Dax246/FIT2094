@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="72734746-30E6-5A07-51FC-FAD1E42235B1" name="APPOINTMENT_SERVICE">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 14:37:25 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="service_code" id="E7100D7D-4ABF-40ED-4FFA-9BA22B20E7F0">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 06:20:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Service Code]]></commentInRDBMS>
+<generatorID>AB712452-D6BD-5590-A959-9F53AA6CA69D</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>0B3E8E20-1B76-F5FA-19B3-10E55475439D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="service_fee_charged" id="0028C552-CC8A-0D58-800E-C246EA9A2DD6">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 06:21:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[Actual fee charged for service]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="appt_no" id="A081E82C-2EE0-F883-FE28-9C8352AF294D">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:20:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for appointment]]></commentInRDBMS>
+<generatorID>E9417320-0B84-3CF6-6CD4-A6BD0EBBBB82</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>3BA6087F-04BF-84FB-94A2-65E4C84E6AC6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="patient_no" id="202D8FEE-877A-26F4-C58C-8A02713310AD">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Number]]></commentInRDBMS>
+<generatorID>E9417320-0B84-3CF6-6CD4-A6BD0EBBBB82</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>46E62EF0-E429-49A6-8DDA-68B000CAE750</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6021607B-C4C8-DA2A-DDBF-70EAE45E00A9" name="APPOINTMENT_SERVICE PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 11:32:40 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E7100D7D-4ABF-40ED-4FFA-9BA22B20E7F0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

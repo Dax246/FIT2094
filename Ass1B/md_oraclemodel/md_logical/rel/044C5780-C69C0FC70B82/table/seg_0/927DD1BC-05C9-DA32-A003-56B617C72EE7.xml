@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="927DD1BC-05C9-DA32-A003-56B617C72EE7" name="APPOINTMENT_NURSE">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>52B23DED-F30D-6955-A311-9CB6C29F3984</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nurse_no" id="200B17D3-547B-4CDD-4B4C-F4485850FC7A">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nurse Number]]></commentInRDBMS>
+<generatorID>4A2BC84D-A9F9-EBF4-D71C-C7C7235B54FF</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E05CC88-37C6-33FD-2800-33E470E71A78" referredColumn="70619384-C129-E61D-8E58-16A82718F54C"/>
+</associations>
+</Column>
+<Column name="nurse_head" id="534AC8B0-F0DE-60C9-02AB-1F4DE1C34350">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Checks if nurse is head nurse of appointment]]></commentInRDBMS>
+<generatorID>CEE8392E-B7E7-C6B6-B6F4-2C85D6BBF523</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<constraintName>Is_head_nurse?</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<listOfValues>
+<valueDef value="No" description="Nurse is not head nurse"/>
+<valueDef value="Yes" description="Nurse is head nurse"/>
+</listOfValues>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="appt_no" id="C1AC4D1E-5A50-74C6-ADF6-42CDCD077A74">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for appointment]]></commentInRDBMS>
+<generatorID>E69A8FD5-8227-86E2-8421-28C9049BDADC</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B9A6C7C-4E26-FAC1-C4F6-B429D200EFC2" referredColumn="DF8C600A-92B1-0892-E8BE-A369BFD8ACD9"/>
+</associations>
+</Column>
+<Column name="patient_no" id="128F39FE-EEFA-6F6C-7B79-9182E5BA4C6C">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:43:51 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B9A6C7C-4E26-FAC1-C4F6-B429D200EFC2" referredColumn="EDC6422B-06AC-A4B3-5E9D-F93660B701B3"/>
+</associations>
+</Column>
+<Column name="patient_no2" id="BC05D294-95C9-C9C2-994C-0E503080D30D">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 13:00:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Number]]></commentInRDBMS>
+<generatorID>E6E0D259-D059-4B63-9099-C276732F3FCA</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7C9AC70D-0A29-400A-AA33-3469DC046B90" name="APPOINTMENT_NURSE_PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>F914A7DF-D70A-86CA-05BB-CA2A45A6FBB7</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="200B17D3-547B-4CDD-4B4C-F4485850FC7A"/>
+<colUsage columnID="C1AC4D1E-5A50-74C6-ADF6-42CDCD077A74"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="87950915-83E3-78A3-53FF-ECD7EDC3DC34" name="Appointment&apos;s_nurse">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>31C40C86-BC44-4878-9AE3-73E1D9542513</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="128F39FE-EEFA-6F6C-7B79-9182E5BA4C6C"/>
+<colUsage columnID="C1AC4D1E-5A50-74C6-ADF6-42CDCD077A74"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D3DDCD5A-D15D-2285-A281-D510435C2134" name="Appointment_Nurse">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:49 UTC</createdTime>
+<generatorID>73412783-2052-7792-B76F-8F3CC592E870</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="200B17D3-547B-4CDD-4B4C-F4485850FC7A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

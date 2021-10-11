@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="557D78DE-FD35-1680-D966-0280D0351F4F" name="PAYMENT">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>AC7E48B0-E374-C693-6C6E-2E6DC43960B3</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pay_no" id="1359CA73-950B-E5FB-C7B5-09D8C33B4D6F">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Payment Number]]></commentInRDBMS>
+<generatorID>6840A4DD-CE0F-72FB-205B-397B4845BBC7</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pay_from" id="84D45B9A-28E4-57EA-78AD-2BA737FFE2B5">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Payment From]]></commentInRDBMS>
+<generatorID>0427DB18-8E07-E57E-578F-C736003C97BA</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<constraintName>Payment From Names</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<listOfValues>
+<valueDef value="Insurer" description="Insurer Paid"/>
+<valueDef value="Patient" description="Patient paid "/>
+</listOfValues>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pay_amount" id="FE4FC905-1D1B-6C0F-E331-84188ED56EF9">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Payment Amount Paid]]></commentInRDBMS>
+<generatorID>66E31CEA-B1E0-2153-133A-AA457779E6E3</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="appt_no" id="57917983-3BB9-E0E0-DAD8-FC7D22EADA5D">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for appointment]]></commentInRDBMS>
+<generatorID>322F0E09-87F7-CF40-3D9D-BA9AA1253A38</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A852CFD7-0B91-2ACE-265D-B392EF21A2CF" referredColumn="DF8C600A-92B1-0892-E8BE-A369BFD8ACD9"/>
+</associations>
+</Column>
+<Column name="patient_no" id="0386FF29-25CA-F621-7BEF-C7D39B277F1D">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:43:51 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A852CFD7-0B91-2ACE-265D-B392EF21A2CF" referredColumn="EDC6422B-06AC-A4B3-5E9D-F93660B701B3"/>
+</associations>
+</Column>
+<Column name="patient_no2" id="85A0870E-3B77-C928-380E-BEA09DEF474C">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 13:00:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Number]]></commentInRDBMS>
+<generatorID>A0081947-1DC4-FADB-B800-6E46ED348E04</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0FD8740-F146-1F68-69F8-828ABD12C244" name="PAYMENT_PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:48 UTC</createdTime>
+<generatorID>81A7FB48-1FDB-96B9-589E-AAF0FF50235F</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1359CA73-950B-E5FB-C7B5-09D8C33B4D6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B3D9A37-8FB7-FC96-F15D-FAC7E18C8CE6" name="Payment_for_appointment">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:41:49 UTC</createdTime>
+<generatorID>F95A0045-0408-63E9-5DE4-448987C7B7E7</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0386FF29-25CA-F621-7BEF-C7D39B277F1D"/>
+<colUsage columnID="57917983-3BB9-E0E0-DAD8-FC7D22EADA5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

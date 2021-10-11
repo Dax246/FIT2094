@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="52B23DED-F30D-6955-A311-9CB6C29F3984" name="APPOINTMENT_NURSE">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:45:18 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nurse_no" id="4A2BC84D-A9F9-EBF4-D71C-C7C7235B54FF">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:45:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nurse Number]]></commentInRDBMS>
+<generatorID>73412783-2052-7792-B76F-8F3CC592E870</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>90DBE810-07D4-3FE8-8D57-74F9CBAC4900</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nurse_head" id="CEE8392E-B7E7-C6B6-B6F4-2C85D6BBF523">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:47:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[Checks if nurse is head nurse of appointment]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<constraintName>Is_head_nurse?</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<listOfValues>
+<valueDef value="No" description="Nurse is not head nurse"/>
+<valueDef value="Yes" description="Nurse is head nurse"/>
+</listOfValues>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="appt_no" id="E69A8FD5-8227-86E2-8421-28C9049BDADC">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 11:50:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for appointment]]></commentInRDBMS>
+<generatorID>31C40C86-BC44-4878-9AE3-73E1D9542513</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>3BA6087F-04BF-84FB-94A2-65E4C84E6AC6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="patient_no" id="E6E0D259-D059-4B63-9099-C276732F3FCA">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 12:59:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patient Number]]></commentInRDBMS>
+<generatorID>31C40C86-BC44-4878-9AE3-73E1D9542513</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>46E62EF0-E429-49A6-8DDA-68B000CAE750</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F914A7DF-D70A-86CA-05BB-CA2A45A6FBB7" name="APPOINTMENT_NURSE PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:45:57 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4A2BC84D-A9F9-EBF4-D71C-C7C7235B54FF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Payment for appointment" directorySegmentName="seg_0" id="F95A0045-0408-63E9-5DE4-448987C7B7E7">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 06:27:29 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<sourcePk>21CBDA71-AA94-33AC-1A1D-27E6B600B7F4</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>paid for by</nameOnSource>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BD6C7EAB-EBB5-6DE8-9A94-715BD2B83A9B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AC7E48B0-E374-C693-6C6E-2E6DC43960B3</targetEntity>
+<transferable>true</transferable>
+</Relation>

@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D045EE83-2C79-7E84-743A-28DDDD81E537" name="INSURER">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:12:49 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="insurer_code" id="B0E9E9C8-E43F-7024-3DED-D261FBA83E20">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:15:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Insurance Code]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="insurer_name" id="61DC3384-7B84-8534-7A4B-260D09FC1B12">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:15:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[Insurer Name]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="insurer_phone_no" id="77F2B3B9-ACD3-535E-56BE-100237BC88E4">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:16:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[insurer's phone number]]></commentInRDBMS>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1B19E4FC-3B41-D37A-7D14-8783EF236DA1" name="INSURER PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:16:16 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B0E9E9C8-E43F-7024-3DED-D261FBA83E20</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

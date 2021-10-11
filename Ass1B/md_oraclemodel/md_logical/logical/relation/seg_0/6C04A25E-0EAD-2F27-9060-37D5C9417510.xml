@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Provider&apos;s appointments" directorySegmentName="seg_0" id="6C04A25E-0EAD-2F27-9060-37D5C9417510">
+<createdBy>damie</createdBy>
+<createdTime>2021-01-31 14:03:34 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<sourcePk>FE4F25E8-1EEB-66BA-CB8F-083A5879A68E</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>Assigned</nameOnSource>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>ECB0DA99-3A85-E862-B633-2E77F13E094E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BD6C7EAB-EBB5-6DE8-9A94-715BD2B83A9B</targetEntity>
+<transferable>true</transferable>
+</Relation>

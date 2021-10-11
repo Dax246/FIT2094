@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="24AC8FC8-6838-6CD3-C979-8C1069E20AC9" name="PROVIDER_SERVICE">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-01 02:56:02 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="prov_code" id="A6EC6C1F-2F6F-1A3A-8531-64FCD87FFF5D">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 06:14:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Provider code]]></commentInRDBMS>
+<generatorID>7683DA58-8C03-F8CC-64E1-F21C909CC453</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>7B848038-4711-B0A2-CD69-B1EF83247E1B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="service_code" id="6316CEC2-5345-2F77-DC3B-A9C2A88519DB">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 06:15:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Service Code]]></commentInRDBMS>
+<generatorID>8FAECDF4-8B13-9158-823D-0D058439A3E9</generatorID>
+<ownerDesignName>md_logical</ownerDesignName>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="true"/>
+</engineerTo>
+<referedAttribute>0B3E8E20-1B76-F5FA-19B3-10E55475439D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D7E9878A-D135-942F-96B4-AAB0866DE7A5" name="PROVIDER_SERVICE PK">
+<createdBy>damie</createdBy>
+<createdTime>2021-02-02 06:14:48 UTC</createdTime>
+<ownerDesignName>md_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="044C5780-A572-8C80-352C-C69C0FC70B82" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A6EC6C1F-2F6F-1A3A-8531-64FCD87FFF5D</attributeRef>
+<attributeRef>6316CEC2-5345-2F77-DC3B-A9C2A88519DB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
